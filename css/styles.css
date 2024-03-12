@@ -1,7 +1,7 @@
 :root {
   --fuenteCabecera: "PT Sans", sans-serif;
   --fuenteParrafos: "Open Sans", sans-serif;
-
+  --colorClaro: #e1e1e1;
   --colorPrimario: #784d3c;
   --blanco: #fff;
 }
@@ -38,6 +38,7 @@ h2,
 h3,
 h4 {
   font-family: var(--fuenteCabecera);
+  line-height: 1.2;
 }
 
 h1 {
@@ -88,7 +89,6 @@ img {
 @media (min-width: 768px) {
   .header__texto {
     margin-top: 15rem;
-
   }
 }
 
@@ -126,9 +126,75 @@ img {
 }
 
 @media (min-width: 768px) {
-  .contenido__principal{
+  .contenido__principal {
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 4rem;
   }
 }
+
+.entrada {
+  border-bottom: 1px solid var(--colorClaro);
+  margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+  border:none;
+  margin-bottom: 0;
+}
+
+.boton{
+  display: block;
+  font-family:var(--fuenteCabecera);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+
+}
+@media (min-width: 768px) {
+  .boton{
+    display: inline-block;
+  }
+
+}
+
+.boton--primario{
+  background-color:black;
+
+}
+
+.cursos{
+  list-style: none;
+
+}
+
+.widget-curso__label{
+  font-family: var(--fuenteCabecera);
+  font-weight: bold;
+
+
+}
+
+.widget-cursos__precio{
+  font-weight: regular;
+
+}
+
+.widget-cursos{
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 2rem;
+
+}
+ .widget-cursos:last-of-type{
+  border: none;
+  margin-bottom: 0;
+ }
+
+ .widget-curso__label,
+ .widget-cursos__precio{
+  font-size: 2rem;
+ }
